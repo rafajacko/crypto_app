@@ -34,6 +34,3 @@ Documentação oficial: [CoinMarketCap Docs](https://coinmarketcap.com/api/docum
 - `lib/viewmodel`: Gerenciador de Estado
 - `lib/view`: Interface da aplicação
 - `lib/main.dart`: Ponto de entrada
-
----
-Feito com ❤️ usando Flutter.
