@@ -25,8 +25,6 @@ Utiliza a API da CoinMarketCap com autenticação via API Key:
 X-CMC_PRO_API_KEY: SUA_API_KEY
 ```
 
-Documentação oficial: [CoinMarketCap Docs](https://coinmarketcap.com/api/documentation/v1/)
-
 ## 📁 Estrutura
 
 - `lib/data`: DataSource e Repository
