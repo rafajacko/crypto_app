@@ -1,0 +1,11 @@
+
+# Flutter & Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+*.lock
+*.iml
+.idea/
+android/.gradle
+*.DS_Store
