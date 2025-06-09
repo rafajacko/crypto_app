@@ -1,34 +1,94 @@
+# 📱 App de Cotação de Criptomoedas com Flutter
 
-# CryptoApp Flutter
+Um aplicativo desenvolvido em Flutter que exibe cotações das principais criptomoedas em tempo real, consumindo a API da CoinMarketCap. O projeto foi estruturado utilizando a arquitetura **MVVM+R** para garantir um código limpo, escalável e testável.
 
-Aplicativo Flutter que consome a API da CoinMarketCap para listar criptomoedas com base em critérios definidos.
+---
 
-## 🔧 Funcionalidades
+## 📸 Screenshots
 
-- Arquitetura MVVM: UI, ViewModel, Repository, DataSource.
-- Tela de listagem com cotação em USD e BRL.
-- Detalhes em modal.
-- Pesquisa múltipla por criptos.
-- Pull-to-refresh.
-- Valores padrão se nenhum símbolo for buscado.
+| Tela Principal | Detalhes da Moeda |
+|----------------|-------------------|
+| ![Tela Principal](./bcebcd7b-dfb9-457b-ab56-d02770536d5a.png) | ![Detalhes](./cc11198f-3116-48ea-93fe-5d1ab0925a89.png) |
+| Pesquisa e Atualização | Interface de Erro |
+| ![Busca e Atualização](./f1646a70-cd6f-4eca-8abf-be379141d396.png) | ![Erro](./7dd2cee6-007d-46ad-afbd-49fcea33070c.png) |
+| Carregamento | - |
+| ![Loading](./8871bdda-b21b-4bf4-8b49-1119c7ad232e.png) | - |
 
-## 🚀 Como rodar
+---
 
-1. Clone ou baixe o projeto.
-2. Execute `flutter pub get`.
-3. Rode com `flutter run`.
+## ✨ Funcionalidades
 
-## 🔑 API
+- **Listagem em Tempo Real:** Exibe as principais criptomoedas com dados atualizados.
+- **Cotação Dupla:** Mostra os preços em Dólar (USD) e Real (BRL).
+- **Taxa de Conversão Dinâmica:** Busca a taxa de câmbio USD/BRL em tempo real.
+- **Atualização de Dados:**
+  - Gesto de *Pull-to-Refresh*.
+  - Botão de atualização no topo da tela.
+- **Pesquisa Avançada:** Campo de busca por símbolo (ex: `BTC`, `ETH`).
+- **Detalhes da Moeda:** Exibe símbolo, data de adição, valores formatados.
+- **Interface Reativa:** Lida com estados de *loading*, sucesso e erro.
 
-Utiliza a API da CoinMarketCap com autenticação via API Key:
+---
+
+## 🧠 Arquitetura
+
+Este projeto utiliza uma arquitetura limpa, baseada em **MVVM (Model-View-ViewModel)**, com as camadas adicionais de **Repository** e **DataSource**.
+
+### 🔁 Fluxo de Dados
+
+`View → ViewModel → Repository → DataSource → API Externa`
+
+- **View:** Apresentação da UI e interação com o usuário.
+- **ViewModel:** Gerencia o estado da UI e se comunica com o Repository.
+- **Repository:** Intermediário que organiza o acesso aos dados e implementa a lógica.
+- **DataSource:** Responsável por se comunicar diretamente com a API.
+
+---
+
+## 🚀 Tecnologias e Pacotes
+
+- [Flutter](https://flutter.dev): Framework principal.
+- [Dart](https://dart.dev): Linguagem de programação.
+- [provider](https://pub.dev/packages/provider): Gerenciamento de estado e injeção de dependência.
+- [http](https://pub.dev/packages/http): Chamadas HTTP.
+- [intl](https://pub.dev/packages/intl): Formatação de moeda e data.
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### ✅ Pré-requisitos
+
+- Ter o Flutter SDK instalado.
+- Um editor como [VS Code](https://code.visualstudio.com/) ou [Android Studio](https://developer.android.com/studio).
+- Um emulador Android ou dispositivo físico.
+
+### 🛠️ Passos
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/SeuUsuario/flutter-cripto-broker
+cd flutter-cripto-broker
 ```
-X-CMC_PRO_API_KEY: SUA_API_KEY
+2. Instale as dependências:
+
+```bash
+flutter pub get
 ```
+3. Configure sua chave da API:
+```bash
+⚠️ IMPORTANTE: Este projeto requer uma chave de API da CoinMarketCap.
+Acesse https://pro.coinmarketcap.com/ e crie uma conta gratuita.
+Edite o arquivo lib/data/datasources/crypto_datasource.dart:
 
-## 📁 Estrutura
+ // Antes:
+ const String _apiKey = 'SUA_NOVA_CHAVE_API_AQUI';
 
-- `lib/data`: DataSource e Repository
-- `lib/model`: Modelo da Cripto
-- `lib/viewmodel`: Gerenciador de Estado
-- `lib/view`: Interface da aplicação
-- `lib/main.dart`: Ponto de entrada
+ // Depois:
+ const String _apiKey = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
+```
+4. Execute o aplicativo:
+```bash
+flutter run
+```
