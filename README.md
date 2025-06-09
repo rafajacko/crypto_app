@@ -4,18 +4,6 @@ Um aplicativo desenvolvido em Flutter que exibe cotações das principais cripto
 
 ---
 
-## 📸 Screenshots
-
-| Tela Principal | Detalhes da Moeda |
-|----------------|-------------------|
-| ![Tela Principal](./bcebcd7b-dfb9-457b-ab56-d02770536d5a.png) | ![Detalhes](./cc11198f-3116-48ea-93fe-5d1ab0925a89.png) |
-| Pesquisa e Atualização | Interface de Erro |
-| ![Busca e Atualização](./f1646a70-cd6f-4eca-8abf-be379141d396.png) | ![Erro](./7dd2cee6-007d-46ad-afbd-49fcea33070c.png) |
-| Carregamento | - |
-| ![Loading](./8871bdda-b21b-4bf4-8b49-1119c7ad232e.png) | - |
-
----
-
 ## ✨ Funcionalidades
 
 - **Listagem em Tempo Real:** Exibe as principais criptomoedas com dados atualizados.
